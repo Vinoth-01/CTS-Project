@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #A4D0DC;
+    overflow: hidden; /* Prevent scroll on the body */
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ensure the video covers the entire background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -1; /* Send the video behind other content */
+    overflow: hidden; /* Hide any overflow to ensure a clean edge */
+}
+
+/* Ensure the content appears on top of the video */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    /* Additional styles for your content */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c4c4c4;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and navigation items */
+    background: rgba(255, 255, 255, 0.25); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 70px; /* Adjust height as needed */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366; /* Adjusted color for better visibility */
+}
+
+nav ul li a:hover {
+    color: #002244; /* Darker blue on hover */
+}
+
+.logout-button {
+    flex: 0.3;
+    text-align: right;
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border-radius: 20px;
+}
+
+.main-container {
+    display: flex;
+    padding: 20px;
+}
+
+.second-container {
+    flex: 2; /* Increase the flex value to make this container wider */
+    padding: 0; /* Remove padding to ensure image takes full space */
+    margin-right: 10px;
+    height: 85vh;
+    display: flex;
+    align-items: stretch; /* Stretch to full height */
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure image doesn't overflow the container */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container without distortion */
+    display: block;
+}
+
+.third-container {
+    flex: 3;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.third-container h{
+    font-size: 45px;
+    font-weight: 300;
+    color: #c4c4c4;
+    font-weight: bold;
+}
+
+.third-container p{
+    font-size: 20px;
+}
+
+
+.input-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px; /* Space between groups */
+}
+
+.input-field {
+    width: 48%; /* Make fields take up half of the container width */
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #c4c4c4;
+}
+
+.input-field input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    font-size: 1em;
+    transition: all 0.3s ease; /* Smooth transition for focus effects */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.input-field input[type="text"]:focus {
+    border-color: #565656;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none; /* Remove default outline */
+}
+
+.next-button-container {
+    display: flex;
+     /* Center the button */
+    margin-top: 20px; /* Space above the button */
+}
+
+.next-button {
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Keep button font size as is */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.next-button:hover {
+    background-color: #57c7e6;
+}
+.verification-title {
+    font-weight: bold;
+    font-size: 1.5em; /* Optional: Increase font size for emphasis */
+    color: #333; /* Optional: Change color if needed */
+}
+
+
+

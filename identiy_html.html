@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="static/css/identity_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/img/gallery/logo_whight.png" alt="Logo" />
+            </div>
+            <ul>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <video autoplay loop muted class="background-video">
+            <source src="static/img/company_gallery/bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="second-container">
+            <div class="image-container">
+                <img src="four.jpg" alt="Description of Image">
+            </div>
+        </div>
+
+        <div class="third-container">
+		<h class="verification-title">Identity Verification</h>
+        
+
+            <div class="input-group">
+                <br>
+                <div class="input-field">
+                    <label for="field1">Name:</label>
+                    <input type="text" id="field1" name="field1">
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="field2">Policy Id:</label>
+                    <input type="text" id="field2" name="field2">
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="field3">Type of Policy:</label>
+                    <input type="text" id="field3" name="field3">
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="field4">Aadhaar Number:</label>
+                    <input type="text" id="field4" name="field4">
+                </div>
+                <br>
+            </div>
+            <div class="next-button-container">
+                <button type="button" class="next-button" onclick="window.location.href='com_confirm_identy.html'">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="identity_js.js"></script>
+</body>
+</html>

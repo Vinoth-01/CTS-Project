@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1B71A1;
+    overflow: hidden; /* Prevent scroll on the body */
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ensure the video covers the entire background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -1; /* Send the video behind other content */
+    overflow: hidden; /* Hide any overflow to ensure a clean edge */
+}
+
+/* Ensure the content appears on top of the video */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    /* Additional styles for your content */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c4c4c4;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and navigation items */
+    background: rgba(255, 255, 255, 0.25); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 70px; /* Adjust height as needed */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366; /* Adjusted color for better visibility */
+}
+
+nav ul li a:hover {
+    color: #002244; /* Darker blue on hover */
+}
+
+.logout-button {
+    flex: 0.3;
+    text-align: right;
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border-radius: 20px;
+}
+
+.main-container {
+    display: flex;
+    padding: 20px;
+}
+
+.second-container {
+    flex: 2; /* Increase the flex value to make this container wider */
+    padding: 0; /* Remove padding to ensure image takes full space */
+    margin-right: 10px;
+    height: 85vh;
+    display: flex;
+    align-items: stretch; /* Stretch to full height */
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure image doesn't overflow the container */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container without distortion */
+    display: block;
+}
+
+/* Existing CSS rules */
+
+.third-container {
+    flex: 3;
+    padding: 10px;
+}
+
+.third-container-headding {
+    color: #c4c4c4;
+    margin-bottom: 40px;
+}
+
+.third-container-headding h {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* Existing CSS rules */
+
+.verification-row {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.square-container {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Same as the height of verification container */
+    margin-right: 10px; /* Space between square and verification container */
+    border-radius: 5px; /* Optional: rounded corners */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+    overflow: hidden; /* Ensure image does not overflow */
+    margin-right: 20px
+}
+
+.identity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+    display: block; /* Remove any potential inline spacing */
+}
+
+/* Adjust the verification container's width to fit beside the square container */
+.verification-container {
+    display: flex; /* Ensure it is flexible for layout adjustments */
+    align-items: center; /* Center vertically with square container */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    padding: 10px;
+    margin-bottom: 0; /* Remove bottom margin to align with square container */
+    border-radius: 5px;
+    width: 670px; /* Adjust width considering square width + margin */
+    height: 60px; /* Match height with square container */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+}
+
+.verification-container p {
+    font-size: 25px;
+    text-align: left;
+    margin-top: 23px; /* Align text correctly */
+    margin-left: 10px; /* Space between image and text */
+    color: #c4c4c4;
+}
+
+.verification-container:hover {
+    background-color: rgba(255, 255, 255, 0.415); /* Optional: Add a hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+.checkbox-container {
+    font-size: 1.4em;
+    /* Remove specific styles related to checkboxes */
+}
+
+.proceed-button {
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Keep button font size as is */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.proceed-button:hover {
+    background-color: #39c2e8;
+}
+
+
+/* check box */
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.custom-checkbox-label {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* Green tick mark */
+.custom-checkbox-label:before {
+    content: '✔';  /* Green tick character */
+    color: rgb(0, 255, 0);
+    font-size: 24px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 4px;
+    line-height: 30px;
+}
+
+/* Red cross mark */
+.custom-checkbox-label:after {
+    content: '✖';  /* Red cross character */
+    color: red;
+    font-size: 24px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 4px;
+    line-height: 30px;
+}
+
+/* JavaScript will toggle these classes */
+.custom-checkbox-label.checked-once:before {
+    display: block;
+}
+
+.custom-checkbox-label.checked-twice:after {
+    display: block;
+}

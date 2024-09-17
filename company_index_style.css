@@ -1,0 +1,387 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #1B71A1;
+    overflow: hidden; /* Prevent scroll on the body */
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ensure the video covers the entire background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -1; /* Send the video behind other content */
+    overflow: hidden; /* Hide any overflow to ensure a clean edge */
+}
+
+/* Ensure the content appears on top of the video */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    /* Additional styles for your content */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c4c4c4;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and navigation items */
+    background: rgba(255, 255, 255, 0.25); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 70px; /* Adjust height as needed */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366; /* Adjusted color for better visibility */
+}
+
+nav ul li a:hover {
+    color: #002244; /* Darker blue on hover */
+}
+
+.main-container {
+    display: flex;
+    padding: 20px;
+    position: static; /* Ensure it's static */
+}
+
+.second-container {
+    margin-right: 500px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    /* border-radius: 16px; Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    padding: 10px;
+    margin-right: 10px;
+    height: 500px;
+}
+
+.sub-topic-second-container {
+    /* background-color: #7ad1f0; */
+    padding: 15px;
+    margin-bottom: 10px;
+    color: #c4c4c4;
+    font-weight: bold;
+}
+
+.sub-topic-second-container h{
+    font-size: 30px;
+}
+
+
+.sub-second-container1,
+.sub-second-container2,
+.sub-second-container3,
+.sub-second-container4 {
+    display: block;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.378);
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1em;
+    color: black;
+}
+
+.sub-second-container1:hover,
+.sub-second-container2:hover,
+.sub-second-container3:hover,
+.sub-second-container4:hover {
+    background-color: #5077db;
+}
+
+.third-container {
+    width: 1200px; /* Define the width of the container */
+    margin-left: 20px;
+    /* background-color: #ffffff; */
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    height: 85vh; /* Fixed height */
+    overflow-y: scroll; /* Make the third-container scrollable */
+    scroll-behavior: smooth;
+    --sb-track-color: #18313c;/* Scroll bar */
+    --sb-thumb-color: #1764d7;/* Scroll bar */
+    --sb-size: 7px;/* Scroll bar */
+}
+
+/* Scroll bar begin */
+
+.third-container::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+.third-container::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 4px;
+  }
+  
+.third-container::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 2px;
+    border: 3px solid #18313c;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    .third-container {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+/* Scroll Bar color end */
+
+.third-container-headding{
+    width: 1000px; /* 60% of the container */
+    height: 200px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.third-container-headding h {
+    font-size: 60px;
+    color: #dadada;
+}
+
+.third-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures no extra space around the image */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    border: none; /* Remove any border */
+}
+
+.third-container-sub1 {
+    /* background-color: #fff; */
+    margin-bottom: 100px;
+    height: 300px;
+    padding: 50px;
+    font-size: 24px;
+    text-align: center;
+    display: flex; /* Use Flexbox to arrange child elements */
+    justify-content: space-between; /* Ensure the elements are spaced between */
+    margin: 0;
+}
+
+.identity-verification-con {
+    display: flex;
+    width: 100%; /* Ensure it takes up the full width of the parent */
+    margin: 0; /* Remove margin if any */
+    padding: 0; /* Remove padding if any */
+}
+
+.left-identity-verification-con {
+    width: 60%; /* 60% of the container */
+    flex-direction: column;
+    
+}
+
+.left-identity-verification-con-h {
+    width: 380px;
+    font-size: 35px;
+    color: #c4c4c4;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+}
+
+
+.left-identity-verification-con p {
+    color: #c4c4c4;
+    text-align: justify;
+    padding: 30px;
+}
+
+.right-identity-verification-con {
+    width: 40%; /* Ensure it fits within the container */
+    display: flex;
+    justify-content: center; /* Center the GIF horizontally */
+    align-items: center; /* Center the GIF vertically */
+} 
+
+.identity-img {
+    max-width: 100%; /* Ensure the image scales within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures no extra space around the image */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    border: none; /* Remove any border */
+}
+
+.third-container-sub2 {
+    /* background-color: #B2DDED; */
+    margin-bottom: 100px;
+    height: 300px;
+    padding: 50px;
+    font-size: 24px;
+    text-align: center;
+    display: flex; /* Use Flexbox to arrange child elements */
+    justify-content: space-between; /* Ensure the elements are spaced between */
+    margin: 0;
+}
+
+.test-report-verification-con {
+    display: flex;
+    width: 100%; /* Ensure it takes up the full width of the parent */
+}
+
+.left-test-report-verification-con {
+    width: 40%; /* 60% of the container */
+    display: flex;
+    justify-content: center; /* Center the GIF horizontally */
+    align-items: center; /* Center the GIF vertically */
+}
+
+.right-test-report-verification-con {
+    width: 60%; /* 40% of the container */
+    flex-direction: column;
+}
+
+.right-test-report-verification-con-h {
+    width: 440px;
+    font-size: 35px;
+    color: #c4c4c4;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+}
+
+.right-test-report-verification-con p {
+    color: #c4c4c4;
+    text-align: justify;
+    padding: 30px;
+}
+
+.third-container-sub3 {
+    /* background-color: #fff; */
+    margin-bottom: 100px;
+    height: 300px;
+    padding: 50px;
+    font-size: 24px;
+    text-align: center;
+    display: flex; /* Use Flexbox to arrange child elements */
+    justify-content: space-between; /* Ensure the elements are spaced between */
+    margin: 0;
+}
+
+.scan-report-verification-con {
+    display: flex;
+    width: 100%; /* Ensure it takes up the full width of the parent */
+}
+
+.left-scan-report-verification-con {
+    width: 60%; /* 60% of the container */
+    flex-direction: column;
+}
+
+.left-scan-report-verification-con-h {
+    width: 450px;
+    font-size: 35px;
+    color: #c4c4c4;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+}
+
+.left-scan-report-verification-con p {
+    color: #c4c4c4;
+    text-align: justify;
+    padding: 30px;
+}
+
+.right-scan-report-verification-con {
+    width: 40%; /* 40% of the container */
+    display: flex;
+    justify-content: center; /* Center the GIF horizontally */
+    align-items: center; /* Center the GIF vertically */
+}
+
+.third-container-sub4 {
+    /* background-color: #B2DDED; */
+    margin-bottom: 100px;
+    height: 300px;
+    padding: 50px;
+    font-size: 24px;
+    text-align: center;
+    display: flex; /* Use Flexbox to arrange child elements */
+    justify-content: space-between; /* Ensure the elements are spaced between */
+    margin: 0;
+}
+
+.prescription-verification-con {
+    display: flex;
+    width: 100%; /* Ensure it takes up the full width of the parent */
+}
+
+.left-prescription-verification-con {
+    width: 40%; /* 60% of the container */
+    display: flex;
+    justify-content: center; /* Center the GIF horizontally */
+    align-items: center; /* Center the GIF vertically */
+}
+
+.right-prescription-verification-con {
+    width: 60%; /* 40% of the container */
+    flex-direction: column;    
+}
+
+.right-prescription-verification-con-h {
+    width: 450px;
+    font-size: 35px;
+    color: #c4c4c4;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */   
+}
+
+.right-prescription-verification-con p {
+    color: #c4c4c4;
+    text-align: justify;
+    padding: 30px;
+}

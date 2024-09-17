@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background: url('../img/gallery/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Vertically center logo and links */
+    background: rgba(255, 255, 255, 0.25); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 70px; /* Set a height for the navbar */
+}
+
+.logo-container {
+    margin-left: 190px;
+    display: flex; /* Ensure it aligns with the nav items */
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust size based on your preference */
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366; /* Adjusted color for better visibility */
+}
+
+nav ul li a:hover {
+    color: #002244; /* Darker blue on hover */
+}
+
+/* Circle container */
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between buttons */
+    justify-content: flex-end;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the label below the circle */
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background-color: #87bdcb; /* Blue color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, background-image 0.3s ease;
+    margin-top: 250px;
+    margin-right: 20px;
+    background-size: 50%; /* Reduce image size to 50% of the button */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Assign PNG images to each circle */
+.circle-first {
+    background-image: url('../img/icons/brain-black.png');
+}
+
+.circle-second {
+    background-image: url('../img/icons/liver-black.png');
+}
+
+.circle-third {
+    background-image: url('../img/icons/kidney-black.png');
+}
+
+.circle-fourth {
+    background-image: url('../img/icons/heart-black.png');
+}
+
+.circle-fifth {
+    background-image: url('../img/icons/stomach-black.png');
+}
+
+/* Hover effect to change to SVG images */
+.circle:hover {
+    background-color: #69bace; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+    background-size: 55%; /* Increase image size slightly on hover */
+}
+
+.circle-first:hover {
+    background-image: url('../img/icons/brain-white.svg');
+}
+
+.circle-second:hover {
+    background-image: url('../img/icons/liver-white.svg');
+}
+
+.circle-third:hover {
+    background-image: url('../img/icons/kidney-white.svg');
+}
+
+.circle-fourth:hover {
+    background-image: url('../img/icons/heart-white.svg');
+}
+
+.circle-fifth:hover {
+    background-image: url('../img/icons/stomach-white.svg');
+}
+
+.circle:active {
+    background-color: #69bace; /* Even darker blue on click */
+    transform: scale(1.05); /* Keep a slight scale when active */
+}
+
+.circle:focus {
+    outline: none;
+}
+
+/* Circle label */
+.circle-label {
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #1c1c1c; /* Dark blue color for labels */
+    text-align: center;
+    font-weight: bold;
+}

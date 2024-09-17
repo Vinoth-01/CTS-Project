@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="static/css/company_profile_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/img/gallery/logo_whight.png" alt="Logo" />
+            </div>
+            <ul>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <video autoplay loop muted class="background-video">
+            <source src="static/img/company_gallery/bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="second-container">
+            <div class="image-container">
+                <img src="" alt="Description of Image">
+            </div>
+        </div>
+
+        <div class="third-container">
+            <div class="third-container-headding">
+                <h>FOUR-STEP FRAUD CHECK</h>
+                <br>
+            </div>
+            <form id="verificationForm">
+                <div class="verification-row">
+                    <div class="square-container">
+                        <img src="static/img/company_gallery/1.png" alt="1" class="identity-img">
+                    </div>
+                    <a href="identiy_html.html" class="verification-container">
+                        <p>Identity Verification</p>
+                    </a>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="customCheckbox1" />
+                        <label for="customCheckbox1" class="custom-checkbox-label"></label>
+                    </div>
+                </div>
+            
+                <div class="verification-row">
+                    <div class="square-container">
+                        <img src="static/img/company_gallery/2.png" alt="2" class="identity-img">
+                    </div>
+                    <a href="test_report_html.html" class="verification-container">
+                        <p>Test Report Verification</p>
+                    </a>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="customCheckbox2" />
+                        <label for="customCheckbox2" class="custom-checkbox-label"></label>
+                    </div>
+                </div>
+            
+                <div class="verification-row">
+                    <div class="square-container">
+                        <img src="static/img/company_gallery/3.png" alt="3" class="identity-img">
+                    </div>
+                    <a href="scan_report_html.html" class="verification-container">
+                        <p>Scan Report Verification</p>
+                    </a>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="customCheckbox3" />
+                        <label for="customCheckbox3" class="custom-checkbox-label"></label>
+                    </div>
+                </div>
+            
+                <div class="verification-row">
+                    <div class="square-container">
+                        <img src="static/img/company_gallery/4.png" alt="4" class="identity-img">
+                    </div>
+                    <a href="prescription_html.html" class="verification-container">
+                        <p>Prescription Verification</p>
+                    </a>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="customCheckbox4" />
+                        <label for="customCheckbox4" class="custom-checkbox-label"></label>
+                    </div>
+                </div>
+            
+                <button type="submit" class="proceed-button">Proceed</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        // Function to handle checkbox clicks
+function handleCheckboxClick(checkboxId) {
+    const checkbox = document.getElementById(checkboxId);
+    const label = document.querySelector(`label[for='${checkboxId}']`);
+    
+    let clickCount = 0;
+
+    label.addEventListener("click", function() {
+        clickCount++;
+
+        if (clickCount > 2) {
+            clickCount = 1;
+        }
+
+        label.classList.remove("checked-once", "checked-twice");
+
+        if (clickCount === 1) {
+            label.classList.add("checked-once");  // Display green tick
+        } else if (clickCount === 2) {
+            label.classList.add("checked-twice");  // Display red cross
+        }
+    });
+}
+
+// Add event listeners for all checkboxes
+handleCheckboxClick('customCheckbox1');
+handleCheckboxClick('customCheckbox2');
+handleCheckboxClick('customCheckbox3');
+handleCheckboxClick('customCheckbox4');
+
+
+    </script>
+
+    <script src="company_profile_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/company_index_style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/img/gallery/logo_whight.png" alt="Logo" />
+            </div>
+            <ul>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <video autoplay loop muted class="background-video">
+            <source src="static/img/company_gallery/bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="second-container-bg">
+            <div class="sub-topic-second-container" id="subTopic"><h>Requests</h></div>
+            <div class="second-container">
+            <button class="sub-second-container1" onclick="goToPage()">Name1</button>
+            <button class="sub-second-container2" onclick="goToPage()">Name2</button>
+            <button class="sub-second-container3" onclick="goToPage()">Name3</button>
+            <button class="sub-second-container4" onclick="goToPage()">Name4</button>
+            </div>
+        </div>
+
+        <div class="third-container">
+            <div class="third-container-headding">
+                <h>DOCUMENT VERIFICATION</h>
+                <br>
+                <h>PROCESS</h>
+            </div>
+            <div class="third-container-sub1">
+                <div class="identity-verification-con">
+                    <div class="left-identity-verification-con">
+                        <div class="left-identity-verification-con-h">
+                            <h>Identity Verification</h>
+                        </div>
+                        <div class="left-identity-verification-con-p">  
+                            <p>Identity Verification ensures the claimant is accurately identified by matching personal details with official records, preventing impersonation and fraud.</p>
+                        </div>
+                    </div>
+                    <div class="right-identity-verification-con">
+                        <img src="static/img/company_gallery/Identity Verification.png" alt="Identity Verification Image" class="identity-img">
+                    </div>
+                </div>
+            </div>
+            <div class="third-container-sub2">
+                <div class="test-report-verification-con">
+                    <div class="left-test-report-verification-con">
+                        <img src="static/img/company_gallery/Test Report Verification.png" alt="Test Report Verification Image" class="identity-img">
+                    </div>
+                    <div class="right-test-report-verification-con">
+                        <div class="right-test-report-verification-con-h">
+                            <h>Test Report Verification</h>
+                        </div>
+                        <div class="right-test-report-verification-con-p">
+                            <p>Test Report Verification confirms the authenticity of medical test results to ensure they align with the claim and are not falsified.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third-container-sub3">
+                <div class="scan-report-verification-con">
+                    <div class="left-scan-report-verification-con">
+                        <div class="left-scan-report-verification-con-h">
+                            <h>Scan Report Verification</h>
+                        </div>
+                        <div class="left-scan-report-verification-con-p">
+                            <p>Scan Report Verification checks the validity of imaging reports to ensure they are genuine and relevant to the claimed medical conditions.</p>
+                        </div>
+                    </div>
+                    <div class="right-scan-report-verification-con">
+                        <img src="static/img/company_gallery/Scan Report Verification.png" alt="Scan Report Verification Image" class="identity-img">
+                    </div>
+                </div>
+            </div>
+            <div class="third-container-sub4">
+                <div class="prescription-verification-con">
+                    <div class="left-prescription-verification-con">
+                        <img src="static/img/company_gallery/Prescription Verification.png" alt="Prescription Verification Image" class="identity-img">
+                    </div>
+                    <div class="right-prescription-verification-con">
+                        <div class="right-prescription-verification-con-h">
+                            <h>Prescription Verification</h>
+                        </div>
+                        <div class="right-prescription-verification-con-p">
+                            <p>Prescription Verification validates that prescriptions are legitimate and issued by licensed professionals, preventing misuse and fraud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <script src="static/js/company_index_script.js"></script>
+</body>
+</html>

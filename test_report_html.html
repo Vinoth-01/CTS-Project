@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="static/css/test_report_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/img/gallery/logo_whight.png" alt="Logo" />
+            </div>
+            <ul>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <video autoplay loop muted class="background-video">
+            <source src="static/img/company_gallery/bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="second-container">
+            <div class="image-container">
+                <img src="four.jpg" alt="Description of Image">
+            </div>
+        </div>
+
+        <div class="third-container">
+		    <h class="verification-title">Test Report Verification</h>
+            <br>
+            <p>Test Report Verification confirms the authenticity of medical test results to ensure they align with the claim and are not falsified.</p>
+
+            
+            <div class="next-button-container">
+                <button type="button" class="next-button" onclick="window.location.href='com_confirm_test_report.html'">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="test_report_js.js"></script>
+</body>
+</html>

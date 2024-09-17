@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="static/css/com_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Company Login</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-side">
+            <div class="wrapper">
+                <div class="title">Login</div>
+                <form id="login-form">
+                    <!-- Updated label and input -->
+                    <div class="field">
+                        <input type="text" name="username" aria-label="User Name" required>
+                        <label for="username">User Name</label>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" aria-label="Password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <br>
+                    <div class="field">
+                        <button type="submit" id="login-btn">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle the form submission
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            // Perform your login logic here, such as validation or sending data to the server
+
+            // Redirect to "after_login.html" upon successful login
+            window.location.href = "company_index.html";
+        });
+    </script>
+
+</body>
+</html>

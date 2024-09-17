@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="static/css/com_confirm_identy_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/img/gallery/logo_whight.png" alt="Logo" />
+            </div>
+            <ul>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <video autoplay loop muted class="background-video">
+            <source src="static/img/company_gallery/bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="second-container">
+            <div class="image-container">
+                <img src="four.jpg" alt="Description of Image">
+            </div>
+        </div>
+
+        <div class="third-container">
+            <div class="verification-title"><h>Scam Report Verification</h></div>
+
+            <div class="gif-container">
+                <img src="static/img/company_gallery/verified.gif" alt="Description of GIF" class="identity-gif">
+            </div>
+            
+            <div class="next-button-container">
+                <button type="button" class="next-button" id="nextButton">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to redirect to index.html when "Next" button is clicked
+        document.getElementById("nextButton").addEventListener("click", function() {
+            window.location.href = "company_profile.html";  // Redirects to index.html
+        });
+    </script>
+
+    <!-- <script src="identity_js.js"></script> -->
+</body>
+</html>

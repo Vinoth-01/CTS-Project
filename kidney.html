@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/kidney_css.css">
+    <title>Layout Example</title>
+</head>
+<body>
+    <div id="top-container"><br>
+        Insurance Claim for Kidney Problems
+        <div id="profile-container">
+            <img src="profile-image.jpg" alt="Profile" id="profile-image">
+            <div id="profile-dropdown" class="dropdown-content">
+                <a href="#" id="logout-link">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div id="left-container">
+            <div onclick="showContainer('container-1', this)">Patient Details</div>
+            <div onclick="showContainer('container-2', this)">Policy Details</div>
+            <div onclick="showContainer('container-3', this)">Report Upload</div>
+        </div>
+
+        <div id="main-content">
+            <!-- Combined Form -->
+            <form id="combined-form" action="/upload" method="post" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
+                <!-- Container 1 -->
+                <div id="container-1" class="new-container" style="width: 500px;">
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span>:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="age">Age <span class="required">*</span>:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="patient-id">Patient ID <span class="required">*</span>:</label>
+                        <input type="text" id="patient-id" name="patient-id" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="blood-group">Blood Group <span class="required">*</span>:</label>
+                        <input type="text" id="blood-group" name="blood-group" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="aadhaar">Aadhaar Number <span class="required">*</span>:</label>
+                        <input type="text" id="aadhaar" name="aadhaar" required>
+                    </div>
+                    <br>
+                    <input type="hidden" name="container" value="container-1">
+                    <button type="button" onclick="showContainer('container-2')">Next</button>
+                </div>
+
+                <!-- Container 2 -->
+                <div id="container-2" class="new-container" style="display: none; width: 500px;" >
+                    <div class="form-group">
+                        <label for="policy-id">Policy ID<span class="required">*</span>:</label>
+                        <input type="text" id="policy-id" name="policy-id" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="aadhaar-card">Aadhaar Card (Upload)<br>Accepted format: PDF, Max size: 2MB<span class="required">*</span>:</label>
+                        <input type="file" id="aadhaar-card" name="aadhaar-card" required>
+                    </div>
+
+                    <input type="hidden" name="container" value="container-2">
+                    <button type="button" onclick="showContainer('container-3')">Next</button>
+                </div>
+
+                <!-- Container 3 -->
+                <div id="container-3" class="new-container" style="display: none; width: 500px;">
+                    <div class="form-group">
+                        <label for="report-upload">Report Upload<br>Accepted format: PDF, Max size: 2MB <span class="required">*</span>:</label>
+                        <input type="file" id="report-upload" name="report-upload" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="scan-upload">Scan Upload<br>Accepted format: PDF, Max size: 2MB <span class="required">*</span>:</label>
+                        <input type="file" id="scan-upload" name="scan-upload" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prescription-upload">Prescription Upload<br>Accepted format: PDF, Max size: 2MB <span class="required">*</span>:</label>
+                        <input type="file" id="prescription-upload" name="prescription-upload" required>
+                    </div>
+                    <div class="form-group"></div>
+                        <label for="otherfiles-upload">Other-Documents Upload<br>Accepted format: PDF, Max size: 2MB <span class="required">*</span>:</label>
+                        <input type="file" id="otherfiles-upload" name="otherfiles-upload" required>
+                    </div>
+
+                    <input type="hidden" name="container" value="container-3">
+                    <button type="submit" style = "width: 100px; height: 40px; margin-top: 400px; margin-left: 100px;">Submit</button>
+                </div>
+            </form>
+            <p id="success-message" style="display: none; color: green; font-weight: bold;">Files received successfully!</p>
+        </div>
+    </div>
+
+    <script src="../static/js/kidney_js.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const form = document.getElementById('combined-form');
+            const formData = new FormData(form);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('success-message').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        // function showContainer(containerId) {
+        //     const containers = document.querySelectorAll('.new-container');
+        //     containers.forEach(container => {
+        //         container.style.display = 'none';
+        //     });
+        //     document.getElementById(containerId).style.display = 'block';
+        // }
+    </script>
+</body>
+</html>

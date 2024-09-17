@@ -1,0 +1,245 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-container {
+    background-color: #007b9e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    height: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative; /* Ensure profile container is positioned relative to this */
+}
+
+
+
+#main-container {
+    display: flex;
+    flex: 1;
+    background: #fff;
+}
+
+#left-container {
+    background-color: #fff;
+    width: 20%;
+	height:180px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* The shadow effect */
+}
+
+#left-container div {
+    background-color: #a9a9a9;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    cursor: pointer;
+}
+
+#left-container div:last-child {
+    border-bottom: none;
+}
+
+#main-content {
+    background-color: #fff;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: none; /* Initially hide the main content */
+    position: relative;
+    align-items: flex-start; /* Align children to the start (left) */
+}
+
+.new-container {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #007b9e;
+    width: 100%; /* Full width of the parent container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* The shadow effect */
+}
+
+#connection-line {
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 10px;
+    height: 50px;
+    background-color: #007b9e;
+    visibility: hidden; /* Initially hide the connection line */
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: one for labels and one for inputs */
+    gap: 10px; /* Space between columns */
+    max-width: 600px; /* Limit form width */
+    width: 100%; /* Full width of the container */
+    margin: 0; /* Remove auto margins to align left */
+}
+
+.form-group {
+    display: contents; /* Use grid layout without extra spacing */
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make label text bold */
+    color: #333; /* Dark gray color for better readability */
+}
+
+input {
+    width: 90%; /* Reduce width of inputs */
+    padding: 8px; /* Add padding inside input fields */
+    border: 2px solid #007b9e; /* Add border with color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effects */
+}
+
+input:focus {
+    border-color: #005f7a; /* Darker border on focus */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+.required {
+    color: red;
+}
+
+button {
+    padding: 10px 20px; /* Adjust padding to control size */
+    font-size: 16px; /* Set font size */
+    border: none;
+    background-color: #007b9e;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px; /* Add space above button */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background-color: #005f7a; /* Darker background on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+/* Existing styles */
+
+#left-container div {
+    background-color: #a9a9a9;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Active state for left-side container items */
+#left-container div.active {
+    background-color: #007b9e; /* Highlight color */
+    color: white; /* Text color for better visibility */
+}
+/* CSS for completed state */
+#left-container div.completed {
+    background-color: #28a745; /* Green color for completed state */
+    color: white; /* Text color for better visibility */
+}
+
+/* Tick sign */
+#left-container div.completed::after {
+    content: '✔'; /* Unicode tick sign */
+    margin-left: 10px; /* Space between text and tick sign */
+    font-size: 18px; /* Size of the tick sign */
+}
+/* Add styling for completed state */
+.completed {
+    background-color: #28a745; /* Green color */
+    color: white; /* White text color */
+    position: relative; /* Required for positioning the tick */
+}
+
+.completed::after {
+    content: '✔'; /* Tick sign */
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px; /* Adjust as needed */
+}
+/* Style for error inputs */
+input.error {
+    border-color: #dc3545; /* Red border for error state */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Enhanced shadow for error */
+}
+
+/* Style for error message */
+#error-message {
+    color: #dc3545; /* Red color for error message */
+    font-weight: bold;
+    display: none; /* Initially hide error message */
+    margin-top: 10px;
+}
+#profile-container {
+    position: absolute; /* Positioned relative to #top-container */
+    top: 50%; /* Center vertically */
+    right: 15px; /* Align to the right with some margin */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    align-items: center;
+	z-index:10px;
+}
+
+#profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#profile-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Below the profile image */
+    right: 0; /* Align to the right edge */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    z-index: 20;
+}
+
+#profile-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+#profile-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+#profile-container.active #profile-dropdown {
+    display: block;
+}
